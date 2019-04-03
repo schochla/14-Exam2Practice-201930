@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Leo Schoch-Spana.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -40,9 +40,9 @@ def main():
     # UN-comment tests as you work the problems.
     ###########################################################################
 
-    # run_test_init()
+    run_test_init()
     # run_test_append_string()
-    # run_test_double()
+    run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
     # run_test_reset()
@@ -64,6 +64,11 @@ class Box(object):
     """
 
     def __init__(self, contents, volume):
+        self.contents = contents
+        self.volume = volume
+        if len(self.contents) > volume:
+            self.contents = ''
+
         """
         What comes in:
           -- self
@@ -95,7 +100,7 @@ class Box(object):
           :type volume: int
         """
         # ---------------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -105,7 +110,10 @@ class Box(object):
         # ---------------------------------------------------------------------
 
     def append_string(self, additional_contents):
-        """
+        self.additional_contents = additional_contents
+        for k in range:
+            self.contents = self.contents + additional_contents[k]
+    """
         What comes in:
           -- self
           -- A string that is to be appended to this Box's contents
@@ -160,6 +168,11 @@ class Box(object):
         # ---------------------------------------------------------------------
 
     def double(self):
+        self.contents = self.contents + self.contents
+        space = self.volume - len(self.contents)
+
+
+
         """
         What comes in:
           -- self
