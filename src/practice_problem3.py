@@ -154,6 +154,7 @@ def run_test_practice_problem3a():
 
 
 def practice_problem3a(circles):
+
     """
     What comes in:  A sequence of rg.Circles.
     What goes out:  Returns the product of the x-coordinates

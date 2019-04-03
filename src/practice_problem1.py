@@ -42,10 +42,10 @@ def main():
 
     run_test_init()
     # run_test_append_string()
-    run_test_double()
+    # run_test_double()
     # run_test_shrink()
     # run_test_double_then_shrink()
-    # run_test_reset()
+    run_test_reset()
     # run_test_steal()
     # run_test_get_history()
     # run_test_combined_box()
@@ -66,8 +66,11 @@ class Box(object):
     def __init__(self, contents, volume):
         self.contents = contents
         self.volume = volume
+        self.originalcontents = contents
         if len(self.contents) > volume:
             self.contents = ''
+            self.originalcontents = self.contents
+        self.originalvolume = volume
 
         """
         What comes in:
@@ -206,7 +209,7 @@ class Box(object):
           #                       contents that did NOT fit]
         """
         # ---------------------------------------------------------------------
-        # TODO: 4. Implement and test this function.
+        # DONE: 4. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
@@ -321,6 +324,8 @@ class Box(object):
         # ---------------------------------------------------------------------
 
     def reset(self):
+        self.contents = self.originalcontents
+        self.volume = self.originalvolume
         """
         What comes in:
           -- self
@@ -330,7 +335,7 @@ class Box(object):
           when this Box was constructed.
         """
         # ---------------------------------------------------------------------
-        # TODO: 7. Implement and test this function.
+        # DONE: 7. Implement and test this function.
         #     The testing code is already written for you (above).
         # ---------------------------------------------------------------------
         # ---------------------------------------------------------------------
